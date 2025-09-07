@@ -1532,6 +1532,7 @@ class ModuleNode(Nodes.Node, Nodes.BlockNode):
                 type.empty_declaration_code()))
 
     def generate_new_function(self, scope, code, cclass_entry):
+        # TODO: (Vizonex) __cnew__ For Metaclasses
         tp_slot = TypeSlots.ConstructorSlot("tp_new", "__cinit__")
         slot_func = scope.mangle_internal("tp_new")
         if tp_slot.slot_code(scope) != slot_func:

@@ -274,6 +274,7 @@ uncachable_builtins = [
     '_',  # e.g. used by gettext
 ]
 
+# TODO (Vizonex) __cnew__ method
 special_py_methods = cython.declare(frozenset, frozenset((
     '__cinit__', '__dealloc__', '__richcmp__', '__next__',
     '__await__', '__aiter__', '__anext__',

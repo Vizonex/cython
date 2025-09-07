@@ -2614,6 +2614,7 @@ class CClassScope(ClassScope):
                 if self.lookup_here(n):
                     error(pos, "Cannot define both % and __richcmp__" % n)
         if name == "__new__":
+            # TODO: __cnew__ or __new__ for cdef extensions
             error(pos, "__new__ method of extension type will change semantics "
                 "in a future version of Pyrex and Cython. Use __cinit__ instead.")
         entry = self.declare_var(name, py_object_type, pos,

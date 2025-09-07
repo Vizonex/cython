@@ -1077,6 +1077,7 @@ class SlotTable:
 
             MethodSlot(initproc, "tp_init", "__init__", method_name_to_slot),
             EmptySlot("tp_alloc"),  #FixedSlot("tp_alloc", "PyType_GenericAlloc"),
+            # TODO: __cnew__ for Metaclass Construction
             ConstructorSlot("tp_new", "__cinit__"),
             EmptySlot("tp_free"),
 
